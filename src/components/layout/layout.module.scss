@@ -1,0 +1,13 @@
+.group{
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:hover{
+        background-color: #E3EAFB !important;
+    }
+}
+
+.fragment{
+    width: 2rem;
+    height: 1rem;
+}
