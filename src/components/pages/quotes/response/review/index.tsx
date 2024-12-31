@@ -1,4 +1,5 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { useDisclosure } from "@mantine/hooks";
 import { PiCaretDownBold } from "react-icons/pi";
 import { Stack, Box, Title, Text, Avatar, Modal, Grid, Group, Button, SimpleGrid } from "@mantine/core";
@@ -24,6 +25,11 @@ export default function QuoteReview({onCancel}:QuoteReviewProps) {
             setLoading(false);
             toggle();
             onCancel();
+            toast.success("RFQ ID sent successfully!", {
+                style: {
+                    fontSize: 13
+                }
+            });
             window.scrollTo({ top: 0, behavior: "instant" });
         }, 3000);
     }
